@@ -1,0 +1,241 @@
+-- Load the library
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source"))()
+
+-- Create the main window
+local Window = OrionLib:MakeWindow({
+    Name = "Made By Player And Vengeance",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "OrionTest"
+})
+
+-- Tab 1: Player tab
+local PlayerTab = Window:MakeTab({
+    Name = "Player",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Movement section in Player tab
+local MovementSection = PlayerTab:AddSection({
+    Name = "Movement"
+})
+
+-- Walkspeed slider
+PlayerTab:AddSlider({
+    Name = "Walkspeed",
+    Min = 16,
+    Max = 500,
+    Default = 16,
+    Color = Color3.fromRGB(255, 255, 255),
+    Increment = 1,
+    ValueName = "WS",
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    end
+})
+
+-- Jump height slider
+PlayerTab:AddSlider({
+    Name = "Jump Height",
+    Min = 16,
+    Max = 500,
+    Default = 5,
+    Color = Color3.fromRGB(255, 255, 255),
+    Increment = 1,
+    ValueName = "Height",
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+    end
+})
+
+-- Tab 2: mm2 tab
+local ToolsTab = Window:MakeTab({
+    Name = "mm2",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Tools section in Tools tab
+local ToolsSection = ToolsTab:AddSection({
+    Name = "mm2"
+})
+
+-- yahrm button
+ToolsTab:AddButton({
+    Name = "yahrm",
+    Callback = function()
+        -- Replace with your tool script URL
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Joystickplays/psychic-octo-invention/main/yarhm.lua", false))()
+    end
+})
+
+-- symphony hub button
+ToolsTab:AddButton({
+    Name = "symphony hub",
+    Callback = function()
+        -- Replace with your tool script URL
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/ThatSick/ArrayField/main/SymphonyHub.lua'))()
+    end
+})
+
+-- Script: Break in 2 tab
+local ScriptTab = Window:MakeTab({
+    Name = "Break in 2",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local ScriptSection = ScriptTab:AddSection({
+    Name = "Break in 2"
+})
+
+-- bruh button
+ScriptTab:AddButton({
+    Name = "OP",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RScriptz/RobloxScripts/main/BreakIn2.lua"))()
+    end
+})
+
+ScriptTab:AddButton({
+	Name = "JN HH Gaming",
+	Callback = function()
+      		loadstring(game:HttpGet("https://freenote.biz/raw/qLlMYwbVNd",true))()
+  	end    
+})
+
+-- Tab : Universal tab
+local UniversalTab = Window:MakeTab({
+    Name = "Universal",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local UniversalSection = UniversalTab:AddSection({
+    Name = "Universal Scripts"
+})
+
+UniversalTab:AddButton({
+	Name = "VHUB",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/V31nc/On-Discord/Created/VexHub"))()
+  	end    
+})
+
+UniversalTab:AddButton({
+	Name = "Ghost Hub",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+  	end    
+})
+
+UniversalTab:AddButton({
+	Name = "Sky Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/SkyHub.txt"))() 
+  	end    
+})
+
+UniversalTab:AddButton({
+	Name = "Backdoor.exe V6",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/iK4oS/backdoor.exe/v6x/source.lua'))()
+  	end    
+})
+
+UniversalTab:AddButton({
+	Name = "Inf store",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Infinite-Store/Infinite-Store/main/main.lua"))()
+  	end    
+})
+
+UniversalTab:AddButton({
+	Name = "Fly Gui Neon",
+	Callback = function()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Fly-Gui-V3-Dark-Theme-11884"))()
+  	end    
+})
+
+-- Tab : Blox fruits
+local BloxFruitsTab = Window:MakeTab({
+    Name = "Blox fruits",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local BloxFruitsSection = BloxFruitsTab:AddSection({
+    Name = "Blox Fruits"
+})
+
+BloxFruitsTab:AddButton({
+	Name = "Redz Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+  	end    
+})
+
+BloxFruitsTab:AddButton({
+	Name = "Min Gaming Update New",
+	Callback = function()
+      		_G.LoadUiFast = false
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CheemsNhuChiAl/MinGamingHub/main/mingamingupdatenew"))()
+  	end    
+})
+
+local FeTab = Window:MakeTab({
+	Name = "Fe scripts",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = FeTab:AddSection({
+	Name = "Fe Scripts"
+})
+
+FeTab:AddButton({
+	Name = "Fe Script Hub",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalFEScriptHub/main/Script'))()
+  	end    
+})
+
+UniversalTab:AddButton({
+	Name = "TigerHub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Tiger-Hub-V3-13585"))()
+  	end    
+})
+
+UniversalTab:AddButton({
+	Name = "Animation Editor Fe",
+	Callback = function()
+      		loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Gazer-FE-Animation-Editor-14508"))()
+  	end    
+})
+
+-- Tab : Nerd
+local Nerd = Window:MakeTab({
+    Name = "Synergy Scripts",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local NerdSection = Nerd:AddSection({
+	Name = "Nerd Scripts"
+})
+
+Nerd:AddButton({
+	Name = "Rizz Hub",
+	Callback = function()
+      		print(loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/OpenSource/main/rizzler.lua",true))())
+  	end    
+})
+
+Nerd:AddButton({
+	Name = "Synergy Hub",
+	Callback = function()
+      		print(loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/products/main/SynergyHub/loader.lua", true))())
+  	end    
+})
